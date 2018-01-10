@@ -7,10 +7,22 @@
 
 	//產生回傳給line server的格式
 	$sender_userid = $json_obj->events[0]->source->userId;
+	$sender_groupid = $json_obj->events[0]->source->groupId;
 	$sender_txt = $json_obj->events[0]->message->text;
 	$sender_replyToken = $json_obj->events[0]->replyToken;
 	$line_server_url = 'https://api.line.me/v2/bot/message/push';
 	switch ($sender_txt) {
+		case "group":
+			$response = array (
+				"to" => $sender_groupid,
+				"messages" => array (
+					array (
+						"type" => "text",
+						"text" => "Hello, YOU SAY ".$sender_txt
+					)
+				)
+			);
+			break;
     		case "push":
         		$response = array (
 				"to" => $sender_userid,
