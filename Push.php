@@ -109,12 +109,12 @@
 								array (
 									"type" => "postback",
                    							"label" => "ADSL",
-                    							"data" => "action=add&itemid=123"
+                    							"data" => "action=ADSL&itemid=123"
 								),								,
 								array (
 									"type" => "postback",
                    							"label" => "MOD",
-                    							"data" => "action=add&itemid=123"
+                    							"data" => "action=MOD&itemid=123"
 								)
 							)
 						)
