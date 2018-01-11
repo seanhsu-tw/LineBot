@@ -99,7 +99,7 @@
 							"type" => "buttons",
 							//"thumbnailImageUrl" => "https://www.w3schools.com/css/paris.jpg",
 							//"title" => "Menu",
-							"text" => "Please select",
+							"text" => "類別",
 							"actions" => array (
 								array (
 									"type" => "postback",
