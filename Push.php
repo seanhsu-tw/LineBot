@@ -98,17 +98,26 @@
 						"template" => array (
 							"type" => "buttons",
 							"thumbnailImageUrl" => "https://www.w3schools.com/css/paris.jpg",
-							"title" => "Menu",
-							"text" => "Please select",
+							"title" => "業務別",
 							"actions" => array (
 								array (
 									"type" => "postback",
-									"label" => "Buy",
-									"data" => "action=buy&itemid=123"
+									"label" => "行動",
+									"data" => "action=Mobil&itemid=123"
 								),
 								array (
 									"type" => "postback",
-                   							"label" => "Add to cart",
+                   							"label" => "固網",
+                    							"data" => "action=add&itemid=123"
+								),
+								array (
+									"type" => "postback",
+                   							"label" => "ADSL",
+                    							"data" => "action=add&itemid=123"
+								),
+								array (
+									"type" => "postback",
+                   							"label" => "MOD",
                     							"data" => "action=add&itemid=123"
 								)
 							)
