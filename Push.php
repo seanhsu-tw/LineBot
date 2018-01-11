@@ -98,16 +98,16 @@
 						"template" => array (
 							"type" => "buttons",
 							"thumbnailImageUrl" => "https://www.w3schools.com/css/paris.jpg",
-							"title" => "業務別",
+							"title" => "Select",
 							"actions" => array (
 								array (
 									"type" => "postback",
-									"label" => "行動",
+									"label" => "Mobile",
 									"data" => "action=Mobil&itemid=123"
 								),
 								array (
 									"type" => "postback",
-                   							"label" => "固網",
+                   							"label" => "FixLine",
                     							"data" => "action=add&itemid=123"
 								),
 								array (
