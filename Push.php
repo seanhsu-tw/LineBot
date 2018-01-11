@@ -110,11 +110,6 @@
 									"type" => "postback",
                    							"label" => "ADSL",
                     							"data" => "action=ADSL&itemid=123"
-								),								,
-								array (
-									"type" => "postback",
-                   							"label" => "MOD",
-                    							"data" => "action=MOD&itemid=123"
 								)
 							)
 						)
