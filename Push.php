@@ -108,7 +108,12 @@
 								),
 								array (
 									"type" => "postback",
-                   							"label" => "Add to cart",
+                   							"label" => "ADSL",
+                    							"data" => "action=add&itemid=123"
+								),								,
+								array (
+									"type" => "postback",
+                   							"label" => "MOD",
                     							"data" => "action=add&itemid=123"
 								)
 							)
