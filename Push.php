@@ -98,26 +98,17 @@
 						"template" => array (
 							"type" => "buttons",
 							"thumbnailImageUrl" => "https://www.w3schools.com/css/paris.jpg",
-							"title" => "Select",
+							"title" => "Menu",
+							"text" => "Please select",
 							"actions" => array (
 								array (
 									"type" => "postback",
-									"label" => "Mobile",
-									"data" => "action=Mobil&itemid=123"
+									"label" => "Buy",
+									"data" => "action=buy&itemid=123"
 								),
 								array (
 									"type" => "postback",
-                   							"label" => "FixLine",
-                    							"data" => "action=add&itemid=123"
-								),
-								array (
-									"type" => "postback",
-                   							"label" => "ADSL",
-                    							"data" => "action=add&itemid=123"
-								),
-								array (
-									"type" => "postback",
-                   							"label" => "MOD",
+                   							"label" => "Add to cart",
                     							"data" => "action=add&itemid=123"
 								)
 							)
