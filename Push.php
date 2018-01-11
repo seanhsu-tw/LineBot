@@ -98,8 +98,8 @@
 						"template" => array (
 							"type" => "buttons",
 							//"thumbnailImageUrl" => "https://www.w3schools.com/css/paris.jpg",
-							"title" => "Menu",
-							//"text" => "Please select",
+							//"title" => "Menu",
+							"text" => "Please select",
 							"actions" => array (
 								array (
 									"type" => "postback",
