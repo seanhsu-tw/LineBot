@@ -110,6 +110,16 @@
 									"type" => "postback",
                    							"label" => "ADSL",
                     							"data" => "action=ADSL&itemid=123"
+								),
+								array (
+									"type" => "postback",
+                   							"label" => "FIXLINE",
+                    							"data" => "action=ADSL&itemid=123"
+								),
+								array (
+									"type" => "postback",
+                   							"label" => "MOD",
+                    							"data" => "action=ADSL&itemid=123"
 								)
 							)
 						)
