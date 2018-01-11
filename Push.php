@@ -97,9 +97,9 @@
 						"altText" => "this is a buttons template",
 						"template" => array (
 							"type" => "buttons",
-							"thumbnailImageUrl" => "https://www.w3schools.com/css/paris.jpg",
+							//"thumbnailImageUrl" => "https://www.w3schools.com/css/paris.jpg",
 							"title" => "Menu",
-							"text" => "Please select",
+							//"text" => "Please select",
 							"actions" => array (
 								array (
 									"type" => "postback",
