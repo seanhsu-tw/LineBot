@@ -204,7 +204,7 @@
  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);                                                                      
  curl_setopt($ch, CURLOPT_HTTPHEADER, $header);                                                                                                   
  $result = curl_exec($ch);
- fwrite($myfile, "\xEF\xBB\xBF".json_decode($result)); //在字串前加上\xEF\xBB\xBF轉成utf8格式
+ fwrite($myfile, "\xEF\xBB\xBF".$result); //在字串前加上\xEF\xBB\xBF轉成utf8格式
  fclose($myfile);
  curl_close($ch); 
 
