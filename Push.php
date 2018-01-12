@@ -14,7 +14,6 @@
 		case "create":
       $line_server_url = 'https://api.line.me/v2/bot/richmenu';
       
-			$sender_groupid = $json_obj->events[0]->source->groupId;
                 $response=array("size"=> array("width"=> 2500,"height"=> 1686),
                 "selected"=> false,
                 "name"=> "Controller",
