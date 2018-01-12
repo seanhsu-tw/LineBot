@@ -4,8 +4,11 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-$CHANNEL_ACCESS_TOKEN= "Authorization: Bearer zh275cPTIq0eAPgvrlwd/D9zJAcl6Jsa07NefXgXnpNZW9acevNUrnEpeUblbhNtvEIbzvKRjZMFNa3hQ8AAiP2aMNRn1bvn0SFRQ3WRM3dVYib8HK0JNqHVu+aOKVMzxINBx5RuQNmFnCgsFQf+LQdB04t89/1O/w1cDnyilFU=";
+$CHANNEL_ACCESS_TOKEN= "zh275cPTIq0eAPgvrlwd/D9zJAcl6Jsa07NefXgXnpNZW9acevNUrnEpeUblbhNtvEIbzvKRjZMFNa3hQ8AAiP2aMNRn1bvn0SFRQ3WRM3dVYib8HK0JNqHVu+aOKVMzxINBx5RuQNmFnCgsFQf+LQdB04t89/1O/w1cDnyilFU=";
 putenv("CHANNEL_ACCESS_TOKEN=$CHANNEL_ACCESS_TOKEN");
+
+$CHANNEL_SECRET="b31e8198da5d4628baed950a6479c1ae";
+putenv("CHANNEL_SECRET=$CHANNEL_SECRET");
 
 $httpClient = new LINE\LINEBot\HTTPClient\CurlHTTPClient(getenv('CHANNEL_ACCESS_TOKEN'));
 $bot = new LINE\LINEBot($httpClient, ['channelSecret' => getenv('CHANNEL_SECRET')]);
