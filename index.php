@@ -4,6 +4,8 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
+putenv("CHANNEL_ACCESS_TOKEN=$uniqid");
+
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient(getenv('CHANNEL_ACCESS_TOKEN'));
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => getenv('CHANNEL_SECRET')]);
 $signature = $_SERVER['HTTP_' . \LINE\LINEBot\Constant\HTTPHeader::LINE_SIGNATURE];
