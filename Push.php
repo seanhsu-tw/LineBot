@@ -6,12 +6,23 @@
 	fwrite($myfile, "\xEF\xBB\xBF".$json_str); //在字串前加上\xEF\xBB\xBF轉成utf8格式
 	
 	//產生回傳給line server的格式
+	$richmenuId="richmenu-ae9ad2bfdf46e3f44c4bd0fed4c53574";
 	$sender_userid = $json_obj->events[0]->source->userId;
 	$sender_txt = $json_obj->events[0]->message->text;
 	$sender_replyToken = $json_obj->events[0]->replyToken;
 	$line_server_url = 'https://api.line.me/v2/bot/message/push';
 	switch ($sender_txt) {
+		case "upload":
+			$line_server_url = 'https://api.line.me/v2/bot/richmenu/$richmenuId/content';
+			$im = imagecreatefrompng("https://imgur.com/a/t353r");
+
+			$response = array (
+				$im
+			);
+			
+			break;
 		case "create":
+			
 			$line_server_url = 'https://api.line.me/v2/bot/richmenu';
         		$response=array("size"=> array("width"=> "2500","height"=> "1686"),
 			    "selected"=> false,
@@ -207,7 +218,14 @@
 
 
  //回傳給line server
+if($sender_txt=="upload")
+{
+ $header[] = "Content-Type: image/png";
+}
+else
+{
  $header[] = "Content-Type: application/json";
+}
  $header[] = "Authorization: Bearer zh275cPTIq0eAPgvrlwd/D9zJAcl6Jsa07NefXgXnpNZW9acevNUrnEpeUblbhNtvEIbzvKRjZMFNa3hQ8AAiP2aMNRn1bvn0SFRQ3WRM3dVYib8HK0JNqHVu+aOKVMzxINBx5RuQNmFnCgsFQf+LQdB04t89/1O/w1cDnyilFU=";
  $ch = curl_init($line_server_url);                                                                      
  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
