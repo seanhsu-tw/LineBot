@@ -16,13 +16,14 @@
 			$line_server_url = 'https://api.line.me/v2/bot/richmenu/$richmenuId/content';
 			
 			$m_img = imagecreatefrompng("https://i.imgur.com/Ea5ZPDz.png");
-			imagealphablending($m_img, false);
-			imagesavealpha($m_img, true);
-			imagepng($m_img, "controller.png", 0);
+			//imagealphablending($m_img, false);
+			//imagesavealpha($m_img, true);
+			//imagepng($m_img, "controller.png", 0);
 
 			//$imagefile = fopen("controller.png", "w+") or die("Unable to open file!"); //設定一個log.txt，用來印訊息
 			//fwrite($imagefile, $json_content); 
 			//fclose($imagefile);
+			
 			fwrite($myfile, $m_im); //在字串前加上\xEF\xBB\xBF轉成utf8格式
 			
 			$response = array (
