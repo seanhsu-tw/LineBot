@@ -14,10 +14,10 @@
 	switch ($sender_txt) {
 		case "upload":
 			$line_server_url = 'https://api.line.me/v2/bot/richmenu/$richmenuId/content';
-			$im = imagecreatefrompng("https://imgur.com/a/t353r");
+			//$im = imagecreatefrompng("https://imgur.com/a/t353r");
 
 			$response = array (
-				$im
+				"https://imgur.com/a/t353r"
 			);
 			
 			break;
