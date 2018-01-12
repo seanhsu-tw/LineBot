@@ -14,7 +14,7 @@
 	switch ($sender_txt) {
 		case "upload":
 			$line_server_url = 'https://api.line.me/v2/bot/richmenu/$richmenuId/content';
-			$json_content = imagecreatefrompng("https://imgur.com/a/t353r");
+			$json_content = imagecreatefrompng("https://i.imgur.com/Ea5ZPDz.png");
 			$imagefile = fopen("controller.png", "w+") or die("Unable to open file!"); //設定一個log.txt，用來印訊息
 			fwrite($imagefile, $json_content); 
 			fclose($imagefile);
