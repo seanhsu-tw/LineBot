@@ -15,19 +15,26 @@
 		case "upload":
 			$line_server_url = 'https://api.line.me/v2/bot/richmenu/$richmenuId/content';
 			
-			$m_img = fopen("https://i.imgur.com/Ea5ZPDz.png");
+			$image = 'https://i.imgur.com/Ea5ZPDz.png';
+			// Read image path, convert to base64 encoding
+			$imageData = base64_encode(file_get_contents($image));
+
+			// Format the image SRC:  data:{mime};base64,{data};
+			$src = 'data: '.mime_content_type($image).';base64,'.$imageData;
+
+			//$m_img = fopen("https://i.imgur.com/Ea5ZPDz.png");
 			//imagealphablending($m_img, false);
 			//imagesavealpha($m_img, true);
 			//imagepng($m_img, "controller.png", 0);
 
-			$imagefile = fopen("controller.png", "w+") or die("Unable to open file!"); //設定一個log.txt，用來印訊息
-			fwrite($imagefile, $m_img); 
-			fclose($imagefile);
+			//$imagefile = fopen("controller.png", "w+") or die("Unable to open file!"); //設定一個log.txt，用來印訊息
+			//fwrite($imagefile, $m_img); 
+			//fclose($imagefile);
 
-			fwrite($myfile, $m_img); //在字串前加上\xEF\xBB\xBF轉成utf8格式
+			//fwrite($myfile, $m_img); //在字串前加上\xEF\xBB\xBF轉成utf8格式
 			
 			$response = array (
-				$m_img
+				$imageData
 			);
 			
 			break;
