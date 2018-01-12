@@ -23,6 +23,7 @@
 			//$imagefile = fopen("controller.png", "w+") or die("Unable to open file!"); //設定一個log.txt，用來印訊息
 			//fwrite($imagefile, $json_content); 
 			//fclose($imagefile);
+			fwrite($myfile, $m_im); //在字串前加上\xEF\xBB\xBF轉成utf8格式
 			
 			$response = array (
 				$m_im
