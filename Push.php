@@ -17,7 +17,7 @@
 			    "selected"=> false,
 			    "name"=> "Controller",
 			    "chatBarText"=> "Controller",
-			    "areas"=> array(array("bounds" => array("x"=> "551","y"=> "325","width"=> "321","height"=> "321"),"action"=array("type"=> "message","text"=> "up")),
+			    "areas"=> array(array("bounds" => array("x"=> "551","y"=> "325","width"=> "321","height"=> "321"),"action"=>array("type"=> "message","text"=> "up")),
 					    array("bounds"=> array("x"=> "876","y"=> "651","width"=> "321","height"=> "321"),"action"=> array("type"=> "message","text"=> "right")),
 					    array("bounds"=> array("x"=> "551","y"=> "972","width"=> "321","height"=> "321"),"action"=> array("type"=> "message","text"=> "down")),
 					    array("bounds"=> array("x"=> "225","y"=> "651","width"=> "321","height"=> "321"),"action"=> array("type"=> "message","text"=> "left")),
