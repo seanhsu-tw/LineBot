@@ -25,7 +25,7 @@
 			//fclose($imagefile);
 			
 			$response = array (
-				"controller.png"
+				$m_im
 			);
 			
 			break;
