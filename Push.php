@@ -11,6 +11,21 @@
 	$sender_replyToken = $json_obj->events[0]->replyToken;
 	$line_server_url = 'https://api.line.me/v2/bot/message/push';
 	switch ($sender_txt) {
+		case "create":
+			$line_server_url = 'https://api.line.me/v2/bot/richmenu';
+			$response=array("size"=> array("width"=> 2500,"height"=> 1686),
+			    "selected"=> false,
+			    "name"=> "Controller",
+			    "chatBarText"=> "Controller",
+			    "areas"=> array(array("bounds" => array("x"=> 551,"y"=> 325,"width"=> 321,"height"=> 321),"action"=array("type"=> "message","text"=> "up")),
+					    array("bounds"=> array("x"=> 876,"y"=> 651,"width"=> 321,"height"=> 321),"action"=> array("type"=> "message","text"=> "right")),
+					    array("bounds"=> array("x"=> 551,"y"=> 972,"width"=> 321,"height"=> 321),"action"=> array("type"=> "message","text"=> "down")),
+					    array("bounds"=> array("x"=> 225,"y"=> 651,"width"=> 321,"height"=> 321),"action"=> array("type"=> "message","text"=> "left")),
+					    array("bounds"=> array("x"=> 1433,"y"=> 657,"width"=> 367,"height"=> 367),"action"=> array("type"=> "message","text"=> "btn b")),
+					    array("bounds"=> array("x"=> 1907,"y"=> 657,"width"=> 367,"height"=> 367),"action"=> array("type"=> "message","text"=> "btn a"))
+					    )
+			);
+			break;
 		case "group":
 			$sender_groupid = $json_obj->events[0]->source->groupId;
 			$response = array (
