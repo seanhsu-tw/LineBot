@@ -16,16 +16,18 @@
 			$line_server_url = 'https://api.line.me/v2/bot/richmenu/$richmenuId/content';
 			
 			$image = 'https://i.imgur.com/Ea5ZPDz.png';
+			$image = imagecreatefromstring(file_get_contents($image));
+			
 			// Read image path, convert to base64 encoding
 			$imageData = file_get_contents($image);
-
-			// Format the image SRC:  data:{mime};base64,{data};
-			//$src = 'data: '.mime_content_type($image).';base64,'.$imageData;
-
-			//$m_img = fopen("https://i.imgur.com/Ea5ZPDz.png");
-			//imagealphablending($m_img, false);
-			//imagesavealpha($m_img, true);
-			//imagepng($m_img, "controller.png", 0);
+			
+			$im = imagecreatefrompng("test.png");
+			header('Content-Type: image/png');
+			imagepng($imageData);
+			
+			imagepng($imageData, "controller.png", 0);
+			
+			imagedestroy($imageData);
 
 			$imagefile = fopen("controller.png", "w+") or die("Unable to open file!"); //設定一個log.txt，用來印訊息
 			fwrite($imagefile, $imageData); 
